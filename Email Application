@@ -1,0 +1,33 @@
+java.util.Scanner
+/*Email Application
+Scenario: You are an IT Support Administrator Specialist and are charged with the 
+task of creating email accounts for new hires.
+Your application should do the following:
+ Generate an email with the following syntax: firstname.lastname@department.company.com
+ Determine the department (sales, development, accounting), if none leave blank
+ Generate a random String for a password
+ Have set methods to change the password, set the mailbox capacity, and define an alternate email address
+ Have get methods to display the name, email, and mailbox capacity
+*/
+
+public class Email{
+private string firstName;
+private string lastName;
+private string password;
+private string department;
+private string alternateEmail;
+private int  mailboxCapacity;
+
+// Constructor to receive the first name and last name
+public Email(string firstName,  string lastName){
+System.out.println("Please Enter Your First Name and Last Name")
+scanner.sh
+}
+// generate random password
+
+// set the mailboxcapacity
+
+// define alternate email
+
+//
+}
