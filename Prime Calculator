@@ -1,0 +1,79 @@
+package com.company;
+
+import java.util.Scanner;
+
+class PrimeCalculate
+
+{
+
+    void sieve_of_Eratosthenes(int n)
+
+    {
+
+//a boolean array myprime is set to true to validate the prime numbers that are present in them
+
+        boolean A[] = new boolean[n+1];
+
+        for(int x=0;x<n;x++)
+
+            A[x] = true;
+
+        for(int val = 2; val*val <=n; val++)
+
+        {
+
+// validates for a prime number
+
+            if(A[val] == true)
+
+            {
+
+// loop to update the multiples of val
+
+                for(int x = val*2; x <= n; x += val)
+
+                    A[x] = false;
+
+            }
+
+        }
+
+// loop to print the prime numbers
+
+        for(int a = 2; a <= n; a++)
+
+        {
+
+            if(A[a] == true)
+
+                System.out.print(a + " ");
+
+        }
+
+    }
+
+
+
+    public static void main(String args[])
+
+    {
+
+        int i;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the value of i ");
+
+        i = scanner.nextInt();
+
+        System.out.print("\t Sieve Of Eratosthenes \t ");
+
+        System.out.println("\nPrime numbers that are smaller than or equal to "+ i);
+
+        PrimeCalculate prime = new PrimeCalculate();
+
+        prime.sieve_of_Eratosthenes(i);
+
+    }
+
+}
